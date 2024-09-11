@@ -60,15 +60,47 @@
 		886FEE3E2C91A5B800C479F0 /* CYS */ = {
 			isa = PBXGroup;
 			children = (
-				886FEE3F2C91A5B800C479F0 /* AppDelegate.swift */,
-				886FEE412C91A5B800C479F0 /* SceneDelegate.swift */,
-				886FEE432C91A5B800C479F0 /* MainViewController.swift */,
-				886FEE592C91ADA900C479F0 /* CYSButton.swift */,
-				886FEE482C91A5BB00C479F0 /* Assets.xcassets */,
-				886FEE4A2C91A5BB00C479F0 /* LaunchScreen.storyboard */,
+				886FEE5B2C91D57D00C479F0 /* Source */,
+				886FEE5C2C91D59200C479F0 /* Resource */,
 				886FEE4D2C91A5BB00C479F0 /* Info.plist */,
 			);
 			path = CYS;
+			sourceTree = "<group>";
+		};
+		886FEE5B2C91D57D00C479F0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				886FEE5D2C91D5EF00C479F0 /* Scene */,
+				886FEE5E2C91D61200C479F0 /* Component */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		886FEE5C2C91D59200C479F0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				886FEE3F2C91A5B800C479F0 /* AppDelegate.swift */,
+				886FEE412C91A5B800C479F0 /* SceneDelegate.swift */,
+				886FEE482C91A5BB00C479F0 /* Assets.xcassets */,
+				886FEE4A2C91A5BB00C479F0 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		886FEE5D2C91D5EF00C479F0 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				886FEE432C91A5B800C479F0 /* MainViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		886FEE5E2C91D61200C479F0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				886FEE592C91ADA900C479F0 /* CYSButton.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
