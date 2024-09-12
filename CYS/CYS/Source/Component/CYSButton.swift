@@ -5,12 +5,15 @@ import Then
 enum BTTpye {
     case start
     case next
+    case end
     var text: String {
         switch self {
         case .start:
             return "START"
         case .next:
             return "NEXT"
+        case .end:
+            return "END"
         }
     }
 }
