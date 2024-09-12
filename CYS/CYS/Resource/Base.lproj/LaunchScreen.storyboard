@@ -16,13 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XhG-ob-sDZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XhG-ob-sDZ">
                                 <rect key="frame" x="107" y="377" width="179" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="99" id="1zv-5l-cqb"/>
+                                    <constraint firstAttribute="width" constant="179" id="R0j-b3-iYL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="179" id="feY-ot-dGK"/>
+                                    <constraint firstAttribute="height" constant="99" id="j1O-HD-RxJ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XhG-ob-sDZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="91" id="90W-6Y-Zzs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XhG-ob-sDZ" secondAttribute="trailing" constant="91" id="IXN-rw-MsJ"/>
+                            <constraint firstItem="XhG-ob-sDZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="Nch-3r-246"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XhG-ob-sDZ" secondAttribute="trailing" constant="107" id="l98-yS-spr"/>
+                            <constraint firstItem="XhG-ob-sDZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="318" id="uJd-u9-Xg9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XhG-ob-sDZ" secondAttribute="bottom" constant="342" id="vOR-E5-TrW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

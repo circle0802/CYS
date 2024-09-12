@@ -2,20 +2,13 @@ import UIKit
 import SnapKit
 import Then
 
-class MainViewController: UIViewController {
+class EndViewController: UIViewController {
     
     private let logoImage = UIImageView().then {
         $0.image = UIImage(named: "logo+Text")
     }
-
-    private let detailLabel = UILabel().then {
-        $0.text = "DSM 학교장 인증제 점수를 확인하고,\n관리해보세요!"
-        $0.font = .systemFont(ofSize: 20)
-        $0.textAlignment = .center
-        $0.numberOfLines = 0
-    }
     
-    let startButton = CYSButton(type: .start)
+    private let endButton = CYSButton(type: .end)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +20,17 @@ class MainViewController: UIViewController {
     
     private func attribute() {
         view.backgroundColor = .white
-        startButton.button.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+        endButton.button.addTarget(self, action: #selector(endButtonTapped), for: .touchUpInside)
+        self.navigationItem.hidesBackButton = true
     }
+    
     private func add() {
         [
             logoImage,
-            detailLabel,
-            startButton
+            endButton
         ].forEach{ view.addSubview($0) }
     }
+    
     private func layout() {
         logoImage.snp.makeConstraints {
             $0.top.equalToSuperview().inset(115)
@@ -43,20 +38,14 @@ class MainViewController: UIViewController {
             $0.height.equalTo(100)
             $0.width.equalTo(260)
         }
-        detailLabel.snp.makeConstraints {
-            $0.top.equalTo(logoImage.snp.bottom).offset(30)
-            $0.centerX.equalToSuperview()
-        }
-        startButton.snp.makeConstraints {
+        endButton.snp.makeConstraints {
             $0.bottom.equalToSuperview().inset(56)
             $0.left.right.equalToSuperview().inset(30)
             $0.height.equalTo(70)
         }
     }
-
-    @objc private func startButtonTapped() {
-        self.navigationController?.pushViewController(QuestionViewController(), animated: true)
+    
+    @objc private func endButtonTapped() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
-
-
