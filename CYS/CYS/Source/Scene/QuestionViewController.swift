@@ -7,7 +7,7 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
     var collectionView: UICollectionView!
     var cellIndex = 0
     
-<<<<<<< HEAD
+
     let question = [
         "지금까지 쓴 독후감의 개수를 \n입력해주세요!",
         "지금까지 참여한 \n독서활동 프로그램의 개수를 \n입력해주세요!",
@@ -23,9 +23,7 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
         "프로젝트를 진행하셨나요?(1년동안)",
         ""
     ]
-    
-=======
->>>>>>> origin/main
+
     private let logoImage = UIImageView().then {
         $0.image = UIImage(named: "logo")
     }
@@ -84,21 +82,13 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: QuestionCell.identifier, for: indexPath) as? QuestionCell
-<<<<<<< HEAD
         cell?.label.text = question[cellIndex]
-=======
-//        self.cellIndex += 1
->>>>>>> origin/main
-        
+
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-<<<<<<< HEAD
         return question.count
-=======
-        return 16
->>>>>>> origin/main
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -113,11 +103,7 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.scrollToItem(at: IndexPath(row: self.cellIndex, section: 0), at: .left, animated: true)
         self.collectionView.isPagingEnabled = true
         
-<<<<<<< HEAD
         if cellIndex >= question.count-1 {
-=======
-        if cellIndex >= 15 {
->>>>>>> origin/main
             self.navigationController?.pushViewController(EndViewController(), animated: true)
             cellIndex = 0
         }
